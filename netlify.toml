@@ -1,0 +1,19 @@
+# Despliegue estático (sin paso de build)
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  publish = "."
+  # Sin comando de build: el HTML carga React y Babel desde CDN
+
+# Cabeceras útiles para activos y JSX servidos como texto estático
+[[headers]]
+  for = "/*.jsx"
+  [headers.values]
+    Content-Type = "text/javascript; charset=utf-8"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
