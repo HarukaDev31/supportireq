@@ -17,3 +17,19 @@
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
+
+# Compatibilidad con enlaces antiguos (nombres con espacios)
+[[redirects]]
+  from = "/Modulo Soporte TI - Wireframes.html"
+  to = "/wireframes.html"
+  status = 301
+
+[[redirects]]
+  from = "/Modulo Soporte TI - shadcn.html"
+  to = "/prototipo-shadcn.html"
+  status = 301
+
+[[redirects]]
+  from = "/Modulo Soporte TI - Wireframes-print.html"
+  to = "/wireframes-print.html"
+  status = 301
